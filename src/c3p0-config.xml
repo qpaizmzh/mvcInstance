@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+
+<c3p0-config>
+
+    <!-- This app is massive! -->
+    <named-config name="mvcApp">
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">10</property>
+
+        <!-- intergalactoApp adopts a different approach to configuring statement caching -->
+        <property name="maxStatements">20</property>
+        <property name="maxStatementsPerConnection">5</property>
+
+    </named-config>
+</c3p0-config>
